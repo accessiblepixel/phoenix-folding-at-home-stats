@@ -4,11 +4,11 @@
  * Plugin Name: Phoenix Folding At Home Stats
  * Plugin URI: https://phoenixweb.com.au/display-folding-at-home-stats-wordpress-plugin/
  * Description: This plugin allows you to display Folding@Home Stats for you or your team in a shortcode or widget.
- * Version: 2.0.0
- * Author: Phoenix Web
+ * Version: 2.0.1
+ * Author: Phoenix Web, jcx
  * Author URI: https://phoenixweb.com.au
  * Requires at least: 4.6
- * Tested up to: 5.7
+ * Tested up to: 6.8
  *
  * Text Domain: ph-folding
  */
