@@ -104,10 +104,10 @@ class Table
                 </thead>
                 <tbody>
                 <?php
-                if ( !empty( $this->attributes['show_logo'] ) ) { ?>
+                if ( !isset($this->attributes['show_logo']) || $this->attributes['show_logo'] == "true" || $this->attributes['show_logo'] == "yes" ) { ?>
                     <tr class="fah-logo">
                         <td colspan="2">
-                            <a href="https://foldingathome.org/"><img src="<?php echo $this->assetsURL . 'images/fah-arrows.png'; ?>" alt="folding at home logo"></a>
+                            <a href="https://foldingathome.org/"><img src="<?php echo $this->assetsURL . 'images/fah-arrows.png'; ?>" alt="folding at home logo"><?php echo $this->attributes['show_logo']; ?></a>
                         </td>
                     </tr>
                 <?php }
@@ -176,7 +176,7 @@ class Table
                 if ( !empty( $this->attributes['show_donor_teams_team_donors'] ) ) {
                     echo $this->renderTeamDonors(); //Does donor teams too
                 }
-                ?>
+                if ( !isset($this->attributes['show_tagline']) || $this->attributes['show_tagline'] == "true" || $this->attributes['show_tagline'] == "yes" ) { ?>
                 <tr class="fah-tagline">
                     <td colspan="2">
                         <div class="fah-tagline_logo">
@@ -190,6 +190,7 @@ class Table
                         </div>
                     </td>
                 </tr>
+                <?php } ?>
                 </tbody>
                 <?php echo ''; ?>
             </table>
